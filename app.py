@@ -16,8 +16,9 @@ uploaded_file = st.file_uploader("📤 Upload Resume (PDF Only)", type=["pdf"])
 if uploaded_file:
     with st.spinner("Analyzing resume..."):
         try:
+            # ✅ LIVE BACKEND URL USED HERE
             res = requests.post(
-                "http://127.0.0.1:8000/analyze/",
+                "https://resume-insight-backend.onrender.com/analyze/",
                 files={"file": uploaded_file}
             )
 
